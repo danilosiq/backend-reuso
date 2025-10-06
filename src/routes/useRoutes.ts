@@ -4,8 +4,8 @@ import { getUsers } from "../controller/userController";
 
 
 
-const router = Router()
+const userRoutes = Router()
 
-router.get('/',getUsers)
+userRoutes.get('/',getUsers)
 
-export default router
+export default userRoutes
