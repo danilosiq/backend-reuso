@@ -5,3 +5,10 @@ services:
     ports:                          #porta do docker run, nao vai precisar mais rodar na mao
       - "3000:3000"
     #command:  npm start
+    depends_on:
+      - db
+
+  db:
+    image:  postgres:15-alpine
+    ports:
+      - "5432:5432"
