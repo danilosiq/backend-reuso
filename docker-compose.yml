@@ -1,0 +1,7 @@
+services:
+  api:                              #Nome do meu servico
+    build: .                        #"faca build e isso vai ta na raiz do meu projeto"
+    container_name: backend         #nome do container - customizado
+    ports:                          #porta do docker run, nao vai precisar mais rodar na mao
+      - "3000:3000"
+    #command:  npm start
