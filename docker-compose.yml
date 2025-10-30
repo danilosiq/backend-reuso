@@ -5,10 +5,16 @@ services:
     ports:                          #porta do docker run, nao vai precisar mais rodar na mao
       - "3000:3000"
     #command:  npm start
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
     depends_on:
       - db
 
   db:
     image:  postgres:15-alpine
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
     ports:
       - "5432:5432"
